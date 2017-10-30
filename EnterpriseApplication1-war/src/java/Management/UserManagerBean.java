@@ -1,6 +1,6 @@
 package Management;
 
-import users.User;
+import users.Bruker;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -16,13 +16,13 @@ public class UserManagerBean implements UserManagerLocal {
     }
 
     @Override
-    public User getUser(String id) {
-        return em.find(User.class, id);
+    public Bruker getUser(String id) {
+        return em.find(Bruker.class, id);
     }
 
     @Override
-    public boolean saveUser(User u){
-        User existing = getUser(u.getEmail().toLowerCase());
+    public boolean saveUser(Bruker u){
+        Bruker existing = getUser(u.getEmail().toLowerCase());
         if  (existing == null){
             em.persist(u);
         } else{
@@ -30,9 +30,10 @@ public class UserManagerBean implements UserManagerLocal {
         }
         return true;
     }
-
-    public boolean updateUser(User u){
-        User existing = getUser(u.getEmail().toLowerCase());
+    
+    @Override
+    public boolean updateUser(Bruker u){
+        Bruker existing = getUser(u.getEmail().toLowerCase());
         if  (existing == null){
             em.merge(u);
         } else{

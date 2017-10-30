@@ -3,13 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/sindrethompson/NetBeansProjects/EnterpriseApplication1/EnterpriseApplication1-war/src/java/Management/NewStudentServlet.java</file>
-            <file>file:/Users/sindrethompson/NetBeansProjects/EnterpriseApplication1/EnterpriseApplication1-war/src/java/users/User.java</file>
-            <file>file:/Users/sindrethompson/NetBeansProjects/EnterpriseApplication1/EnterpriseApplication1-war/src/java/Management/UserManagerBean.java</file>
-            <file>file:/Users/sindrethompson/NetBeansProjects/EnterpriseApplication1/EnterpriseApplication1-war/src/java/servlet/MySQLConnect.java</file>
-            <file>file:/Users/sindrethompson/NetBeansProjects/EnterpriseApplication1/EnterpriseApplication1-war/src/java/Management/UserManagerLocal.java</file>
-            <file>file:/Users/sindrethompson/NetBeansProjects/EnterpriseApplication1/EnterpriseApplication1-war/web/index.html</file>
-            <file>file:/Users/sindrethompson/NetBeansProjects/EnterpriseApplication1/EnterpriseApplication1-war/src/java/users/Student.java</file>
+            <file>file:/Users/sindrethompson/Desktop/Giropp-master/EnterpriseApplication1-war/src/java/Elev/LoginServlet.java</file>
         </group>
     </open-files>
 </project-private>
