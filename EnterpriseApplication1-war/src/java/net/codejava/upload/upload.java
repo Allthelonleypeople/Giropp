@@ -33,8 +33,7 @@ public class upload extends HttpServlet {
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         // gets values of text fields
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
+         String firstName = request.getParameter("comment");
          
         InputStream inputStream = null; // input stream of the upload file
          
@@ -59,14 +58,12 @@ public class upload extends HttpServlet {
             conn = DriverManager.getConnection(dbURL, dbUser, dbPass);
  
             // constructs SQL statement
-            String sql = "INSERT INTO contacts (first_name, last_name, file) values (?, ?, ?);";
+            String sql = "INSERT INTO delivery (comment, File) values (?, ?);";
             PreparedStatement statement = conn.prepareStatement(sql);
-            statement.setString(1, firstName);
-            statement.setString(2, lastName);
-             
+             statement.setString(1, firstName);
             if (inputStream != null) {
                 // fetches input stream of the upload file for the blob column
-                statement.setBlob(3, inputStream);
+                statement.setBlob(2, inputStream);
             }
  
             // sends the statement to the database server
