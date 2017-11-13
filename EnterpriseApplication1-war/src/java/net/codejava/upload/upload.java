@@ -33,7 +33,7 @@ public class upload extends HttpServlet {
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         // gets values of text fields
-         String firstName = request.getParameter("comment");
+         String comment = request.getParameter("comment");
          
         InputStream inputStream = null; // input stream of the upload file
          
@@ -60,7 +60,7 @@ public class upload extends HttpServlet {
             // constructs SQL statement
             String sql = "INSERT INTO delivery (comment, File) values (?, ?);";
             PreparedStatement statement = conn.prepareStatement(sql);
-             statement.setString(1, firstName);
+             statement.setString(1, comment);
             if (inputStream != null) {
                 // fetches input stream of the upload file for the blob column
                 statement.setBlob(2, inputStream);
@@ -68,11 +68,9 @@ public class upload extends HttpServlet {
  
             // sends the statement to the database server
             int row = statement.executeUpdate();
-            if (row > 0) {
-                message = "File uploaded and saved into database";
-            }
+            
+            
         } catch (SQLException ex) {
-            message = "ERROR: " + ex.getMessage();
             ex.printStackTrace();
         } finally {
             if (conn != null) {
@@ -83,11 +81,8 @@ public class upload extends HttpServlet {
                     ex.printStackTrace();
                 }
             }
-            // sets the message in request scope
-            request.setAttribute("Message", message);
-             
-            // forwards to the message page
-            getServletContext().getRequestDispatcher("/EnterpriseApplication1-war/message.html").forward(request, response);
+           
+             response.sendRedirect("/EnterpriseApplication1-war/GetTable");
         }
     }
 }
