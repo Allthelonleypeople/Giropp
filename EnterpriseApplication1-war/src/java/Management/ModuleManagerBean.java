@@ -17,13 +17,13 @@ public class ModuleManagerBean implements ModuleManagerLocal {
     }
 
     @Override
-    public ModuleOppgave getModuleOppgave(String id) {
+    public ModuleOppgave getModuleOppgave(int id) {
         return em.find(ModuleOppgave.class, id);
     }
 
     @Override
     public boolean saveModuleOppgave(ModuleOppgave m){
-        ModuleOppgave existing = getModuleOppgave(m.getNavn());
+        ModuleOppgave existing = getModuleOppgave(m.getModuleOppgaveID());
         if  (existing == null){
             em.persist(m);
         } else{
@@ -31,15 +31,6 @@ public class ModuleManagerBean implements ModuleManagerLocal {
         }
         return true;
     }
+}
     
-    @Override
-    public boolean updateModuleOppgave(ModuleOppgave m){
-        ModuleOppgave existing = getModuleOppgave(m.getNavn());
-        if  (existing == null){
-            em.merge(m);
-        } else{
-            return false;
-        }
-        return true;
-        }
-    }
+  

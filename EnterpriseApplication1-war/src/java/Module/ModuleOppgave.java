@@ -3,11 +3,19 @@ package Module;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
 
 
 @Entity
 public class ModuleOppgave implements Serializable{
     @Id
+    @GeneratedValue
+    @Column
+    private int ModuleOppgaveID;
     @Column
     private String navn;
     @Column
@@ -16,6 +24,7 @@ public class ModuleOppgave implements Serializable{
     private String publisertAv;
     @Column 
     private String deadline;
+   
 
     public ModuleOppgave(String navn, String fag, String publisertAv, String deadline) {
         this.navn = navn;
@@ -56,6 +65,15 @@ public class ModuleOppgave implements Serializable{
     public void setDeadline(String deadline) {
         this.deadline = deadline;
     }
+
+    public int getModuleOppgaveID() {
+        return ModuleOppgaveID;
+    }
+
+    public void setModuleOppgaveID(int ModuleOppgaveID) {
+        this.ModuleOppgaveID = ModuleOppgaveID;
+    }
+    
 }
 
 

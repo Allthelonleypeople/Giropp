@@ -2,6 +2,8 @@ package users;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Id;
 
 @Entity
 public class Bruker implements Serializable{
@@ -14,6 +16,7 @@ public class Bruker implements Serializable{
     private String fName;
     @Column 
     private String lName;
+  
 
 
     public Bruker(String email, String password, String fName, String lName) {
@@ -39,8 +42,6 @@ public class Bruker implements Serializable{
         this.lName = lName;
     }
 
-    protected Bruker(){
-    }
 
     public String getEmail() {
         return email;
@@ -52,5 +53,9 @@ public class Bruker implements Serializable{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    
+
+    protected Bruker(){
     }
 }

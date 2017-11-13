@@ -11,6 +11,7 @@ public abstract class ModuleOppgave_ {
 	public static volatile SingularAttribute<ModuleOppgave, String> publisertAv;
 	public static volatile SingularAttribute<ModuleOppgave, String> navn;
 	public static volatile SingularAttribute<ModuleOppgave, String> deadline;
+	public static volatile SingularAttribute<ModuleOppgave, Integer> ModuleOppgaveID;
 	public static volatile SingularAttribute<ModuleOppgave, String> fag;
 
 }
