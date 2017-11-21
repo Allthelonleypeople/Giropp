@@ -17,45 +17,34 @@ public class ModuleOppgave implements Serializable{
     @Column
     private int ModuleOppgaveID;
     @Column
-    private String navn;
+    private String task;
     @Column
-    private String fag;
-    @Column
-    private String publisertAv;
+    private String Criterias;
     @Column 
     private String deadline;
    
 
-    public ModuleOppgave(String navn, String fag, String publisertAv, String deadline) {
-        this.navn = navn;
-        this.fag = fag;
-        this.publisertAv = publisertAv;
+    public ModuleOppgave(String task, String Criterias, String deadline) {
+        this.task = task;
+        this.Criterias = Criterias;
         this.deadline = deadline;
     }
     
 
-    public String getNavn() {
-        return navn;
+    public String getTask() {
+        return task;
     }
 
-    public void setNavn(String navn) {
-        this.navn = navn;
+    public void setTask(String task) {
+        this.task = task;
     }
 
-    public String getFag() {
-        return fag;
+    public String getCriterias() {
+        return Criterias;
     }
 
-    public void setFag(String fag) {
-        this.fag = fag;
-    }
-
-    public String getPublisertAv() {
-        return publisertAv;
-    }
-
-    public void setPublisertAv(String publisertAv) {
-        this.publisertAv = publisertAv;
+    public void setCriterias(String Criterias) {
+        this.Criterias = Criterias;
     }
 
     public String getDeadline() {
