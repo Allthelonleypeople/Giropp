@@ -43,7 +43,6 @@ public class LogElev extends HttpServlet {
             out.println("<h1>Hallo </h1>");
             out.println("<link rel=\"stylesheet\" href=\"css.css\">");
             out.println("<u1><li><a href=\"Uploaded.html\">Levere modul</a><li></u1>");
-            out.println("<u1><li><a href=\"Oppgave.html\">Opprett module</a><li></u1>");
             out.println("<u1><a href=\"Forum\">Forum</a></u1>");
             out.println("</body>");
             out.println("</html>");
