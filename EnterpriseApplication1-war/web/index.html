@@ -1,35 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Innlogging Elev</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css.css">        
-    </head>    
-    <body>
-        <div class  ="row">
-            <div class ="column venstreheader forside">
-            </div>
-            <div class ="column header forside"> 
-                <img src="C:\Users\Stian\Desktop\Notater\IS-202\Giropp-Development\EnterpriseApplication1-war\resources\UiA_logo1.jpg" alt="Uia logo" width="90" height="90">
-                <div class ="column mellomrom">
-                    <h1>bom</h1> </div>
-                <h2>SLIT</h2> 
-                <h3>For IT-studenter</h3>
-            </div>
-        </div>
+<head>
+    <title>Slit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
-        <div class ="venstre">
-        </div>
-        <div class="midt">
-            <form action="/EnterpriseApplication1-war/StudentLoginServlet" method="post">
-                Email:  <input name="email" type="text" id="email" autofocus><br>
+<h1>SLIT ft. All the lonely people</h1>
+<form action="/EnterpriseApplication1-war/LoginServlet" method="post">
+    Email: <input name="email" type="text"><br>
 
-                Passord: <input name="password" type="password" id="password"><br>
+    Passord: <input name="password" type="password"><br>
 
-                <input type="submit" value="Logg inn" onclick="myFunction()"><br> 
-            </form>
-            <a href="Registrer.html">Registrer deg ved å klikke her</a> <br><br>                
-        </div>
-    </body>
+    <input type="submit" value="Logg inn"> <br> <br>
+    <a href="Registrer.html">Registrer deg her:</a>
+</form>
+</body>
 </html>

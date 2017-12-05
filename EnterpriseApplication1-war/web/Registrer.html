@@ -4,37 +4,17 @@
     <head>
         <title>Login form</title>
         <link rel="stylesheet" href="css.css">
-        <meta charset="UTF-8">
     </head>
     <body>
-        <div class  ="row">
-            <div class ="column venstreheader">
-                <img src="C:\Users\Stian\Desktop\Notater\IS-202\Giropp-Development\EnterpriseApplication1-war\resources\UiA_logo1.jpg" alt="Uia logo" width="60" height="60">
-            </div>    
-            <div class ="column header left"></div>
-            <div class ="column header right"> 
-                <h2>Bruker</h2>
-            </div>
-        </div>
-
-        <div class ="venstre">
-        </div>
-
         <form method="post" action="/EnterpriseApplication1-war/NewStudentServlet"> 
             <br>
-            <div class ="midt">
-                Email :<input type="text" name="email" /><br/>
-                Passord :<input type="password" name="passWord" /><br/>                
-                Fornavn :<input type ="text" name="fName" /> <br/>
-                Etternavn :<input type ="text" name="lName" /> <br/>
-                Brukertype :<br><select name="type" required>
-                    <option value="">-velg type-</option>
-                    <option value="student">Student</option>
-                    <option value="laerer">Lærer</option>
-                </select> <br> <br>
-                <input type="submit" value="Registrer"/> <br><br>
-            </div>
-
+        Email     :<input type="text" name="email" /><br/><br/>
+        Passord   :<input type="password" name="passWord" /><br/><br/>
+        Fornavn   :<input type ="text" name="fName" /> <br/><br/>
+        Etternavn :<input type ="text" name="lName" /> <br/><br/>
+        <input type="submit" value="Registrer"/>
+        
         </form>
+      
     </body>
 </html>
