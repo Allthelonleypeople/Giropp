@@ -1,36 +1,18 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>File Upload to Database Demo</title>
-</head>
-<body>
-    <center>
-        <h1>File Upload to Database Demo</h1>
-        <form method="post" action="uploadServlet" enctype="multipart/form-data">
-            <table border="0">
-                
-                <td>Title: </td>
-                <td><input type="text" name="Title" size="50"/></td>
-                <br><br>
-              
-                <td>Comment: </td>
-                    <td><input type="text" name="comment" size="50"/></td>
-                    
-               
-                <tr>
-                    <td>Innlevering: </td>
-                    <td><input type="file" accept=" .doc, .txt, .jar, .docx" name="file" size="50"/></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" value="Save">
-                    </td>
-                </tr>
-            </table>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>File Upload</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+        <form method="POST" action="upload" enctype="multipart/form-data" >
+            File:
+            <input type="file" name="file" id="file" /> <br/>
+            Destination:
+            <input type="text" value="/tmp" name="destination"/>
+            </br>
+            <input type="submit" value="Upload" name="upload" id="upload" />
         </form>
-    </center>
-</body>
+    </body>
 </html>
