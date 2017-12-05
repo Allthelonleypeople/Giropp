@@ -1,10 +1,5 @@
-package Module;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package Forum;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,10 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author storm
+ * @author Sindre
  */
-@WebServlet(urlPatterns = {"/Module"})
-public class Module extends HttpServlet {
+@WebServlet(name = "Forum", urlPatterns = {"/Forum"})
+public class Forum extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,13 +33,16 @@ public class Module extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Module</title>");            
+            out.println("<title>Forum</title>");            
             out.println("</head>");
             out.println("<body>");
+            out.println("<h1> Her kommer det et stilig forum </h1>");
             out.println("<link rel=\"stylesheet\" href=\"css.css\">");
-            out.println("<h1>Lever moduler her</h1>");
-            //out.println("<h4><input type=\"file\" name=\"Last opp fil\" value="" /></h4>");
-            out.println("<input type=\"submit\" value = \"Ferdig\" enabled  = \"enabled\" / ");
+            out.println("<h2><br><a href=\"MenuStudent\">Forside</a></u1><br></h2>");
+            out.println("<u1><a href=\"FAQ.html\">FAQ</a></u1>");
+            out.println("<u1><a href=\"QuestionKategori.html\">Kategorier</a></u1>");
+            out.println("<u1><a href=\"ForumQuestion.html\">Nytt spørsmål</a></u1>");
+            out.println("<u1><a href=\"ShowQuestions.jsp\">Se spørsmål</a></u1>");
             out.println("</body>");
             out.println("</html>");
         }

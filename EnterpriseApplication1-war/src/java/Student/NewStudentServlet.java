@@ -1,5 +1,6 @@
-package Management;
+package Student;
 
+import Management.UserManagerLocal;
         import users.Student;
         import javax.ejb.EJB;
         import javax.servlet.ServletException;
@@ -7,11 +8,14 @@ package Management;
         import javax.servlet.http.HttpServlet;
         import javax.servlet.http.HttpServletRequest;
         import javax.servlet.http.HttpServletResponse;
+     
         import java.io.IOException;
         import java.io.PrintWriter;
 
 
 @WebServlet ("/NewStudentServlet")
+
+
 public class NewStudentServlet extends HttpServlet {
 
     @EJB
@@ -23,8 +27,8 @@ public class NewStudentServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         String email = request.getParameter("email");
         String password = request.getParameter("passWord");
-        String fName = request.getParameter("firstName");
-        String lName = request.getParameter("lastName");
+        String fName = request.getParameter("fName");
+        String lName = request.getParameter("lName");
         
 
         Student s = new Student(email.toLowerCase(), password, fName, lName);

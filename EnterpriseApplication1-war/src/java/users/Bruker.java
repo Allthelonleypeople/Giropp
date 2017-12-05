@@ -2,9 +2,11 @@ package users;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Id;
 
 @Entity
-public class User implements Serializable{
+public class Bruker implements Serializable{
     @Id
     @Column
     private String email;
@@ -12,19 +14,34 @@ public class User implements Serializable{
     private String password;
     @Column
     private String fName;
-    @Column
+    @Column 
     private String lName;
+  
 
 
-    public User(String email, String password, String fName, String lName) {
+    public Bruker(String email, String password, String fName, String lName) {
         this.email = email;
         this.password = password;
         this.fName = fName;
         this.lName = lName;
     }
 
-    protected User(){
+    public String getfName() {
+        return fName;
     }
+
+    public void setfName(String fName) {
+        this.fName = fName;
+    }
+
+    public String getlName() {
+        return lName;
+    }
+
+    public void setlName(String lName) {
+        this.lName = lName;
+    }
+
 
     public String getEmail() {
         return email;
@@ -38,21 +55,7 @@ public class User implements Serializable{
         this.password = password;
     }
     
-    public String getFName() {
-        return fName;
+
+    protected Bruker(){
     }
-    
-    public void setFName(String fName) {
-        this.fName = fName;
-    }
-    
-    public String getLName() {
-        return lName;
-    }
-    
-    public void setLName(String lName) {
-        this.lName = lName;
-    }
-    
-    
 }

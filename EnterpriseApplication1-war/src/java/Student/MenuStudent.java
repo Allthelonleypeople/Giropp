@@ -1,10 +1,9 @@
-package Module;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package Student;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,10 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author storm
+ * @author Sindre
  */
-@WebServlet(urlPatterns = {"/Module"})
-public class Module extends HttpServlet {
+@WebServlet(name = "MenuStudent", urlPatterns = {"/MenuStudent"})
+public class MenuStudent extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,18 +37,28 @@ public class Module extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Module</title>");            
+            out.println("<title>Servlet LogElev</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<link rel=\"stylesheet\" href=\"css.css\">");
-            out.println("<h1>Lever moduler her</h1>");
-            //out.println("<h4><input type=\"file\" name=\"Last opp fil\" value="" /></h4>");
-            out.println("<input type=\"submit\" value = \"Ferdig\" enabled  = \"enabled\" / ");
+            out.println("<div class =\"row\">");
+            out.println("<div class =\"column venstreheader\"><img src=\"C:\\Users\\Stian\\Desktop\\Notater\\IS-202\\Giropp-Development\\EnterpriseApplication1-war\\resources\\UiA_logo1.jpg\" alt=\"Uia logo\" width=\"60\" height=\"60\"></div>");
+            out.println("<div class =\"column header left\"><h1>Hovedside</h1></div>");
+            out.println("<div class =\"column header right\"><h2>Bruker</h2></div>");
+            out.println("</div>");
+            out.println("<link rel=\"stylesheet\" href=\"css.css\">"); 
+            out.println("<div class =\"venstre\"></div>");
+            out.println("<div class =\"midt\">");
+            out.println("<nicebutton><a href=\"Uploaded.html\">Levere modul</a></nicebutton><br><br>");
+            out.println("<nicebutton><a href=\"NewModule.jsp\">Se moduler</a></nicebutton><br><br>");
+            out.println("<nicebutton><a href=\"ShowQuestions.jsp\">Se spørsmål</a></nicebutton><br><br>");
+            out.println("<nicebutton><a href=\"Forum\">Forum</a></nicebutton>");  
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }
     }
-
+    
+            
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
