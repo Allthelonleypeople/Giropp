@@ -1,7 +1,7 @@
 
 package Management;
 
-import users.Bruker;
+import users.User;
 import javax.ejb.Local;
 /**
  *
@@ -9,7 +9,7 @@ import javax.ejb.Local;
  */
 @Local
 public interface UserManagerLocal {
-    Bruker getUser(String id);
-    boolean saveUser(Bruker u);
-    boolean updateUser(Bruker u);
+    User getUser(String id);
+    boolean saveUser(User u);
+    boolean updateUser(User u);
 }

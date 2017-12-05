@@ -23,15 +23,14 @@ public class NewStudentServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         String email = request.getParameter("email");
         String password = request.getParameter("passWord");
-        String fName = request.getParameter("firstName");
-        String lName = request.getParameter("lastName");
-        
+        //String firstname = request.getParameter("firstName");
+        //String lastname = request.getParameter("lastName");
 
-        Student s = new Student(email.toLowerCase(), password, fName, lName);
+        Student s = new Student(email.toLowerCase(), password);
         if(manager.saveUser(s) == true){
             out.print("Din bruker har blitt opprettet!  ");
             out.print("Du vil nå bli videresendt til innloggingen   ");
-            response.sendRedirect("/EnterpriseApplication1-war/index.html");
+            response.sendRedirect("/EnterpriseApplication1-war/LogElev");
         } else if (manager.saveUser(s) == false){
             out.print("Din bruker kunne ikke bli opprettet, vennligst prøv igjen ");
         }
@@ -46,7 +45,6 @@ public class NewStudentServlet extends HttpServlet {
         newStudent(request, response);
     }
 
-    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

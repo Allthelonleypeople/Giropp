@@ -10,17 +10,11 @@ public class User implements Serializable{
     private String email;
     @Column
     private String password;
-    @Column
-    private String fName;
-    @Column
-    private String lName;
 
 
-    public User(String email, String password, String fName, String lName) {
+    public User(String email, String password) {
         this.email = email;
         this.password = password;
-        this.fName = fName;
-        this.lName = lName;
     }
 
     protected User(){
@@ -37,22 +31,4 @@ public class User implements Serializable{
     public void setPassword(String password) {
         this.password = password;
     }
-    
-    public String getFName() {
-        return fName;
-    }
-    
-    public void setFName(String fName) {
-        this.fName = fName;
-    }
-    
-    public String getLName() {
-        return lName;
-    }
-    
-    public void setLName(String lName) {
-        this.lName = lName;
-    }
-    
-    
 }
