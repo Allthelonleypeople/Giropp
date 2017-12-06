@@ -1,0 +1,149 @@
+
+body {
+    /*background-color: #C63D0F; #ff3333 originalfargen */
+    /*text-align: center;*/
+    margin: 0;
+}
+
+form
+{
+    /*background-color: #FDF3E7; /*#ff3333 originalfargen */
+    color: white;
+    width: 1000px;
+    background-color: #585858;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    background-color: #585858;
+}
+
+a:hover, a:active{
+    color: #585858;
+    background-color: white;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+.column {
+    float: left;
+}
+
+.column.venstreheader.forside {
+    background-color: #3B0B0B;
+    width: 8%;
+    height: 150px;   
+}
+
+.column.venstreheader {
+    background-color: #3B0B0B;
+    width: 7.9%;
+    height: 75px;   
+    padding: 10px;
+}
+
+.column.header.right {
+    background-color: #A4A4A4;
+    text-align: right;
+    padding: 18px;
+    width: 46.05%;
+    height: 75px;
+}
+
+.column.header.left {
+    background-color: #A4A4A4;
+    text-align: left;
+    padding: 18px;
+    width: 46.05%;
+    height: 75px;
+}
+
+.column.header.forside {
+    background-color: #A4A4A4;
+    text-align: left;
+    padding: 20px;
+    width: 92%;
+    height: 150px;
+}
+
+.column.mellomrom {    
+    background-color: #A4A4A4;
+    text-align: left;
+    color: #A4A4A4;
+    padding: 5px;
+    width: 2%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column.venstre {
+    float: left;
+    background-color: #3B0B0B;
+    width: 8%;
+    height: 500px;
+}
+
+.column.midt {
+    background-color: #585858;
+    height: 500px;
+    padding: 20px;
+    color: white;
+    float: left;
+    text-align: left;
+    width: 92%;
+}
+
+input {
+    display: block;
+    box-sizing: border-box;
+}
+
+img {
+    float: left;
+    margin-left: 5px;
+}
+
+.center {
+    align-content: center;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.alert{
+    padding: 20px;
+    background-color: #ff8000;
+    color: white; 
+}
+
+#error {
+    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation-fill-mode: forwards;    
+}
+
+@-webkit-keyframes cssAnimation {
+    to {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,53 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Filopplasting til database</title>
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+        <div class  ="row">
+            <div class ="column venstreheader">
+                <a href="Hovedmeny.html"> <img src="C:\Users\Stian\Desktop\Notater\IS-202\SLit-Utvikling\SLITSYSTEM\SLITSYSTEM-war\resources\UiA_logo1.jpg" alt="Uia logo" width="60" height="60">
+                </a>
+            </div>    
+            <div class ="column header left">
+                <h2>Hovedmeny</h2>
+            </div>
+            <div class ="column header right"> 
+                <h2>Bruker</h2>
+            </div>
+        </div>
+
+        <div class ="venstre">
+        </div>
+
+        <div class="midt">
+            <h3>Filopplasting til database</h3>
+            <form method="post" action="uploadServlet" enctype="multipart/form-data">
+                <table border="0">
+
+                    <td>Tittel: </td>
+                    <td><input type="text" name="Title" size="50"/></td>
+                    <br>
+
+                    <td>Kommentar: </td>
+                    <td><input type="text" name="comment" size="50"/></td>
+
+
+                    <tr>
+                        <td>Innlevering: </td>
+                        <td><input type="file" accept=" .doc, .txt, .jar, .docx" name="file" size="50"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Lagre?">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
