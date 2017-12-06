@@ -11,7 +11,7 @@
             <div class ="column venstreheader forside">
             </div>
             <div class ="column header forside"> 
-                <img src="C:\Users\Stian\Desktop\Notater\IS-202\SLit-Utvikling (1)\SLit-Utvikling\SLITSYSTEM\SLITSYSTEM-war\resources\Uia_logo_flyt.png" alt="Uia logo" width="90" height="90">
+                <img src="C:\Users\Stian\Desktop\Notater\IS-202\SLit-Utvikling\SLITSYSTEM\SLITSYSTEM-war\resources\UiA_logo1.jpg" alt="Uia logo" width="90" height="90">
                 <div class ="column mellomrom">
                     <h1>bom</h1> </div>
                 <h2>SLIT</h2> 
@@ -22,17 +22,20 @@
         <div class ="venstre">
         </div>
         <div class="midt">
-            <form action="" method="post">
+            <form action="/EnterpriseApplication1-war/StudentLoginServlet" method="post">
+
+
                 Email:  <input name="email" type="text" id="email" autofocus><br>
 
                 Passord: <input name="password" type="password" id="password"><br>
 
                 <input type="submit" value="Logg inn" onclick="myFunction()"><br> 
             </form>
-            <a href="">Registrer deg ved å klikke her</a> <br><br>                
-            
-            <a href="index_nightmode.html">Nightmode</a>
-            
+            <a href="Registrer.html">Registrer deg ved å klikke her</a> <br><br> 
+            <div class="alert" id="error">
+                <span class="closebtn" onclick="this.parentElement.style.display = 'none';">&times;</span>
+                <strong>Feil!</strong> Brukernavn eller passord er feil.
+            </div>      
         </div>
     </body>
 </html>
